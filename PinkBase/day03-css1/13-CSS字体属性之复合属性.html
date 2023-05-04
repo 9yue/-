@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS字体属性之复合属性</title>
+  <style>
+    /* div文字变倾斜,加粗,字号设置16像素,并且是微软雅黑 */
+    div {
+      /* font-style: italic;
+      font-weight: 700;
+      font-size: 16px;
+      font-family: 'Mircosoft YaHei'; */
+      /* 复合属性:简写的方式 */
+      /* font: font-style font-weight font-size/line-height font-family; 不能更换顺序*/
+      /* font: italic 700 16px 'Mircosoft YaHei'; */
+
+      /* font-size和font-faily不能省略 */
+      font: 21px 'Mircosoft YaHei';
+    }
+  </style>
+</head>
+
+<body>
+  <div>寥落古行宫，宫花寂寞红。 白头宫女在。 闲坐说玄宗。<div>
+</body>
+
+</html>

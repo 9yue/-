@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>合并单元格</title>
+</head>
+
+<body>
+  <h3>合并单元格方式:</h3>
+  跨行合并 rowspan="合并单元格的个数"<br>
+  跨列合并 colspan="合并单元格的个数"
+  <h3>目标单元格：（写合并代码）</h3>
+  跨行最上侧作为目标单元格，写合并代码<br>
+  跨列最左侧作为目标单元格，写合并代码
+  <h3>合并单元格三部曲</h3>
+  1.先确定是跨行还是跨列<br>
+  2.找到目标单元格，写上合并方式=合并的单元格数量，比如&lt;td colspan="2" &gt;&lt;td/&gt;
+  3.删除多余的单元格(比如案例1，要删除第1行第3列单元格，案列2要删除第三行第1个单元格)
+
+  <h3>案例1：跨列合并</h3>
+  <table border="1" width="300" height="200" cellspacing="0">
+    <tr>
+      <td></td>
+      <td colspan="2"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  <h3>案例2：跨行合并</h3>
+  <table border="1" width="300" height="200" cellspacing="0">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="2"></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</body>
+
+</html>
