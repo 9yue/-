@@ -6,9 +6,44 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>09-块级元素</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+
+    .red {
+      color: red;
+    }
+  </style>
 </head>
 
 <body>
+  <h2>块元素</h2>
+  <ol>
+    <li>比较霸道，自己独占一行</li>
+    <li>高度、宽度、外边距以及内边距都可以控制</li>
+    <li>宽度默认是容器（父级宽度）的100%</li>
+    <li>是一个容器及盒子，里面可以放行内或者块级元素</li>
+  </ol>
+
+  <div>
+    div块级元素
+    <p class="red">这是一个段落</p>
+  </div>
+  <span>行内元素</span>
+
+  <h4>注意：</h4>
+  <ul>
+    <li>文字元素不能使用块级元素</li>
+    <li>p标签主要存放文字，所以p标签内不能放块级元素，尤其不能放div</li>
+    <li>同理，h1-h6都是文字类块级标签，里面不能放其他块级元素</li>
+  </ul>
+  <p>
+  <div>这里是有问题的，不能在p里面放div</div>
+  </p>
+
 
 </body>
 

@@ -6,10 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>子元素选择器</title>
+  <style>
+    /* 1.元素1和元素2用 大于号 隔开；2.元素1和父级，元素2是子级，最终选择的是子级，
+    3.元素2必须是元素1的最近一级子元素，即子元素选择器*/
+    .nav>a {
+      color: pink;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
-
+  <div class="nav">
+    <a href="#">我是儿子</a>
+    <p><a href="">我是孙子</a></p>
+  </div>
 </body>
 
 </html>

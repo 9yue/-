@@ -6,10 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>07-链接伪类选择器写法</title>
+  <style>
+    /* 以为下为链接伪类选择器实际工作开发中写法 */
+    /* 1.给 a链接设置默认样式 */
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+  /* 2.:hover 鼠标经过时的样式 */
+    a:hover {
+      color: pink;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
-
+  <h2>伪类注意事项</h2>
+  <p>1.为了确保生效，按照<strong>LVHA</strong>的顺序声明:link-:visited-:hover-:active;[记忆法：love hate]</p>
+  <p>2.因为a链接在浏览器有默认样式，所以如果想修改a的文字样式，需要单独指定，比如body a {color:pink}，而不是body{color:pink}</p>
+  <a href="#">修改a链接默认样式</a>
 </body>
 
 </html>

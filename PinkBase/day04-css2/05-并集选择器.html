@@ -5,11 +5,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>05-并集选择器</title>
+  <title>并集选择器（重要）</title>
+  <style>
+    /* 要求1：请把熊大和熊二改成粉色 */
+    /* div,
+    p {
+      color: pink;
+    } */
+
+    /* 要求2：请把熊大和熊二改成粉色 还有 小猪一家改成粉色 */
+    div,
+    p,
+    .pig li {
+      color: pink;
+    }
+
+    /* 语法规范：1.并集选择器是各选择器用 英文逗号(,) 隔开，逗号是和的意思
+              2.并集选择器竖着写
+              3.一定要注意，最后一个选择器 不要加逗号
+               */
+  </style>
 </head>
 
 <body>
-
+  <h2>并集选择器</h2>
+  <strong>并集选择器可以选择多组标签，同时为他们定义样式。通常用于集体声明</strong>
+  <div>熊大</div>
+  <p>熊二</p>
+  <span>光头强</span>
+  <ul class="pig">
+    <li>小猪佩奇</li>
+    <li>猪爸爸</li>
+    <li>猪妈妈</li>
+  </ul>
 </body>
+
 
 </html>

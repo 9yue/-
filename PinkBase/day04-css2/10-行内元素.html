@@ -6,10 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>10-行内元素</title>
+  <style>
+    span {
+      width: 100px;
+      height: 200px;
+      background-color: aqua;
+    }
+  </style>
 </head>
 
 <body>
+  <h3>行内元素</h3>
+  <ol>
+    <li>相邻行内元素，一行可以显示多个</li>
+    <li>宽和高直接设置是无效的</li>
+    <li>默认宽度就是他本身内容的宽度</li>
+    <li>行内元素只能容纳文本或其他行内元素</li>
+  </ol>
 
+  <span>古诗古籍</span><strong>行宫</strong><span>古诗古籍-测试行内元素宽度</span><strong>行宫</strong>
+
+  <h3>注意:</h3>
+  <ul>
+    <li>链接里不能再放链接</li>
+    <li>特殊情况链接a标签内可以放块级元素，但是给a </li>
+  </ul>
 </body>
 
 </html>
