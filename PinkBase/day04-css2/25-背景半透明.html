@@ -5,11 +5,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>25-背景半透明</title>
+  <title>背景色半透明</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      /* background: black; */
+      /* 最后一个参数是alpha透明度，取值在0~1 */
+      /* 我们习惯把0.3的0省略，写  background: rgba(0, 0, 0, .3);*/
+      background: rgba(0, 0, 0, .3);
+    }
+  </style>
 </head>
 
 <body>
-
+  <div>CSS3新特性，是IE9+的版本浏览器才支持</div>
 </body>
 
 </html>
