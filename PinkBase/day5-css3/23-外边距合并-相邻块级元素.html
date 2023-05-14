@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>23-外边距合并-相邻块级元素</title>
+  <title>24-外边距合并-相邻块元素垂直外边距合并</title>
+  <style>
+    .damao,
+    .ermao {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+
+    .damao {
+      margin-bottom: 100px;
+    }
+
+    .ermao {
+      margin-top: 200px;
+    }
+  </style>
+
 </head>
+
 <body>
-  
+  <h3>垂直外边距</h3>
+  <p>垂直外边距一般指：margin-top,margin-bottom</p>
+  <h3>相邻块元素垂直外边距的合并</h3>
+  <p>当上下两个块元素（兄弟关系）相遇时，上元素有下边距margin-top,下元素有上边距margin-bottom,
+    他们的垂直间距不是上下外边距之和。</p>
+  <p>取两个值中的<strong>较大者</strong>这种现象被称为<strong>相邻块元素垂直外边距的合并</strong></p>
+  <h3>解决方案：</h3>
+  <p>尽量只给一个盒子添加margin值</p>
+  <div class="damao">大猫</div>
+  <div class="ermao">二猫</div>
 </body>
+
 </html>

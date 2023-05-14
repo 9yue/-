@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>21-外边距典型应用-块级盒子水平居中对齐</title>
+  <style>
+    .header {
+      width: 900px;
+      height: 200px;
+      background-color: pink;
+      /* 1.上下左右都auto */
+      /* margin: auto; */
+      /* 2.左外边距auto，右外边距auto */
+      /* margin-left: auto;
+      margin-right: auto; */
+      /* 3.最常用，上下0，左右auto */
+      margin: 0 auto;
+    }
+
+    /* 块级盒子水平居中：1.盒子必须指定宽（width），2.设置左右外边距设置为auto */
+  </style>
 </head>
+
 <body>
-  
+  <div class="header"></div>
 </body>
+
 </html>
