@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>17-为清除浮动之额外标签法</title>
+  <style>
+    .red {
+      color: red;
+    }
+
+    .box {
+      width: 800px;
+      border: 1px solid salmon;
+      margin: 0 auto;
+    }
+
+    .damao {
+      float: left;
+      width: 300px;
+      height: 200px;
+      background-color: skyblue;
+    }
+
+    .ermao {
+      float: left;
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+
+    .footer {
+      height: 200px;
+      background-color: black;
+    }
+
+    .clear {
+      clear: both;
+    }
+  </style>
 </head>
+
 <body>
-  
+  <h3>清除浮动</h3>
+  <p>1.清除浮动本质上是清除浮动元素脱离标准流造成的影响</p>
+  <p>2.父盒子本身有浮动则不需要清除</p>
+  <p>3.清除浮动后，父级会根据浮动的子盒子自动检测高度。父级有了高度，就不会影响下面的标准流</p>
+  <h3>清除浮动策略</h3>
+  <p><span class="class=" red"">闭合浮动</span>：只让浮动在父盒子内部影响，不影响父盒子以外的其它的盒子</p>
+  <h3 class="red">清除浮动方法1-额外标签法（不常用）</h3>
+  <p>在浮动元素末尾添加一个空的标签，案例如下</p>
+  <p>优点：通俗易懂，书写方便</p>
+  <p>缺点：添加许多无意义的标签，结构化比较差</p>
+  <p class="red">注意：要求这个新的空元素必须是块级元素</p>
+  <div class="box">
+    <div class="damao">大猫</div>
+    <div class="ermao">二毛</div>
+    <div class="clear"></div>
+    <!-- <br class="clear"> -->
+    <!-- <p class="clear"></p> -->
+    <!-- 这个新增元素只能是块级元素，不能是行内元素 -->
+    <!-- <span class="clear"></span> -->
+  </div>
+  <div class="footer"></div>
 </body>
+
 </html>

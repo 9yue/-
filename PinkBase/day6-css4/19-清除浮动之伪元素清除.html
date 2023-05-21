@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>19-清除浮动之伪元素清除</title>
+  <style>
+    .clearfix::after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+
+    .clearfix {
+      /*IE6、7 专用*/
+      *zoom: 1;
+    }
+
+    .box {
+      width: 800px;
+      border: 1px solid salmon;
+      margin: 0 auto;
+    }
+
+    .damao {
+      float: left;
+      width: 300px;
+      height: 200px;
+      background-color: skyblue;
+    }
+
+    .ermao {
+      float: left;
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+
+    .footer {
+      height: 200px;
+      background-color: black;
+    }
+  </style>
 </head>
+
 <body>
-  
+  <h3>清除浮动方法3-:after伪元素法</h3>
+  <p>:after是额外标签法的升级版。也是给父元素添加</p>
+  <p>优点：没有增加标签，结构更简单</p>
+  <p>缺点：照顾低版本</p>
+  <p>代表网站：百度、淘宝、网易等</p>
+
+  <div class="box clearfix">
+    <div class="damao">大猫</div>
+    <div class="ermao">二毛</div>
+  </div>
+  <div class="footer"></div>
+
+  </p>
 </body>
+
 </html>

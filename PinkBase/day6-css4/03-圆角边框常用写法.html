@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>03-圆角边框常用写法</title>
+  <style>
+    .yuanxing {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      /* border-radius: 100px; */
+      /* 50% 就是宽度和高度的一半 等价于 100px */
+      border-radius: 50%;
+    }
+
+    .juxing {
+      width: 300px;
+      height: 100px;
+      background-color: pink;
+      /* 圆角矩形设置为高度的一半 */
+      border-radius: 50px;
+    }
+
+    .radius {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      /*4个值： 顺时针设置4个角 */
+      /* border-radius: 10px 20px 30px 40px; */
+      /* 2个值：对角线设置 */
+      /* border-radius: 10px 40px; */
+      /* 3个值，左上角5px，对角线20px(右上角，左下角)，右下60px  */
+      /* border-radius: 5px 20px 60px; */
+      border-top-left-radius: 20px;
+    }
+  </style>
 </head>
+
 <body>
-  
+  1.圆形的做法
+  <div class="yuanxing"></div>
+  2.圆角矩形的做法
+  <div class="juxing"></div>
+  3.可以设置不同的圆角
+  <div class="radius"></div>
 </body>
+
 </html>
