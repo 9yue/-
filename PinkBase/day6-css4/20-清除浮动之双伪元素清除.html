@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>20-清除浮动之双伪元素清除</title>
   <style>
-    .clearfix::before,
-    .clearfix::after {
+    .clearfix:before,
+    .clearfix:after {
       content: "";
       display: table;
     }
 
-    .clearfix::after {
+    .clearfix:after {
       clear: both;
     }
 
