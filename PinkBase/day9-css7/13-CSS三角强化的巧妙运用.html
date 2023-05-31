@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13-CSS三角强化的巧妙运用</title>
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .box1 {
+      width: 0;
+      height: 0;
+      /* 把上边宽宽度调大 */
+      /* border-top: 100px solid transparent;
+      border-right: 50px solid salmon; */
+      /* 左边和下边框宽度为0 */
+      /* border-bottom: 50px solid slateblue; */
+      /* border-left: 50px solid skyblue; */
+
+
+      /* 代码简写 */
+      /* 1.只保留有边框有颜色 */
+      border-color: transparent skyblue transparent transparent;
+      /* 2.样式兜售solid */
+      border-style: solid;
+      /* 3.上边框宽度更大,右边宽宽度更小,其余边框是 0*/
+      border-width: 100px 50px 0 0;
+    }
+
+    .price {
+      width: 160px;
+      height: 24px;
+      border: 1px solid red;
+      margin: 0 auto;
+      line-height: 24px;
+    }
+
+    .miaosha {
+      position: relative;
+      float: left;
+      width: 90px;
+      height: 100%;
+      background-color: red;
+      text-align: center;
+      color: #fff;
+      font-weight: 700;
+      margin-left: 8px;
+    }
+
+    .miaosha i {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-color: transparent #fff transparent transparent;
+      border-style: solid;
+      border-width: 24px 12px 0 0;
+    }
+
+    .origin {
+      font-size: 12px;
+      color: gray;
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1"></div>
+  <div class="price">
+    <span class="miaosha">
+      ￥1650
+      <i></i>
+    </span>
+    <span class="origin">￥5641</span>
+  </div>
+
+</body>
+
+</html>
