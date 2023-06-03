@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>19-CSS3过渡练习作业2</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .logo {
+      position: relative;
+      left: 20px;
+      top: 20px;
+    }
+
+    .logo_bg {
+      width: 50px;
+      height: 50px;
+      background-color: #ff7702;
+    }
+
+
+    .logo_pic {
+      position: absolute;
+      top: 0;
+      left: -50px;
+      height: 50px;
+      transition: left .3s;
+    }
+
+    .logo_pic img {
+      float: left;
+      width: 50px;
+      height: 50px;
+    }
+
+    .logo:hover .logo_pic {
+      position: absolute;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="logo">
+    <div class="logo_bg">
+    </div>
+    <div class="logo_pic">
+      <img src="images/mi-home.png">
+      <img src="images/mi-logo.png">
+    </div>
+  </div>
+</body>
+
+</html>
