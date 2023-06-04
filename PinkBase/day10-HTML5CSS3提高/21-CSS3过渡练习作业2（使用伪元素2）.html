@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20-CSS3过渡练习作业2（使用伪元素2）</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .logo {
+      position: relative;
+    }
+
+    .logo_box {
+      height: 50px;
+      width: 50px;
+      overflow: hidden;
+      background-color: pink;
+    }
+
+    .logo_box::before,
+    .logo_box::after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 50px;
+      width: 50px;
+      transition: all .3s;
+    }
+
+    .logo_box::before {
+      content: "";
+      background: url("images/mi-logo.png") no-repeat;
+      opacity: 1;
+    }
+
+    .logo_box::after {
+      content: "";
+      background: url("images/mi-home.png") no-repeat;
+      margin-left: -50px;
+      opacity: 0;
+    }
+
+
+
+    .logo_box:hover::before {
+      opacity: 0;
+      margin-left: 50px;
+
+    }
+
+    .logo_box:hover::after {
+      opacity: 1;
+      margin-left: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="logo">
+    <div class="logo_box"></div>
+  </div>
+</body>
+
+</html>
