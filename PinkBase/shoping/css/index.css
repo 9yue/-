@@ -118,3 +118,64 @@
   height: 145px;
   background-color: #ddd;
 }
+
+/* 家用电器模块 */
+.box_hd {
+  height: 30px;
+  border-bottom: 2px solid #c81666;
+}
+.box_hd h3 {
+  float: left;
+  font-size: 18px;
+  color: #c81666;
+  font-weight: 300;
+}
+.box_hd .tab_list {
+  float: right;
+  line-height:30px;
+}
+.tab_list ul li {
+  float: left;
+}
+.tab_list ul li a {
+  margin: 0px 15px;
+}
+.floor .w {
+  margin-top: 30px;
+}
+.box_bd {
+  height: 361px;
+}
+.tab_list_item>div {
+  float: left;
+  height: 361px;
+}
+.col_210 {
+  width: 210px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+.col_210 ul li {
+  float: left;
+  width: 85px;
+  height: 34px;
+  line-height: 34px;
+  margin-left: 12px;
+  border-bottom: 1px solid #edeeed;
+  text-align: center;
+}
+.col_329 {
+  width: 329px;
+}
+.col_221 {
+  width: 221px;
+  border-right: 1px solid #ccc;
+}
+.bb {
+  /*一般情况下，a包含有宽度的盒子，a需要转换为块级元素 */
+  display: block;
+  border-bottom: 1px solid #ccc;
+}
+.col_219 {
+  width: 219px;
+}
