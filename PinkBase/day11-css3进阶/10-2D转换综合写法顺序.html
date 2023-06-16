@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2D转换综合写法顺序</title>
+  <style>
+    /* 1.同时多个转换，格式为：transform: translate() rotate() scale(); */
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      transition: all .5s;
+    }
+
+    div:hover {
+      /* 2.顺序改变会影响转换效果。（先旋转会改变坐标方向） */
+      /* transform: rotate(180deg) translate(150px, 50px); */
+      /* 3.在同时有位移和其它属性的时候，记得要将位移放在最前面（重点！！！） */
+      transform: translate(150px, 50px) rotate(180deg) scale(1.2);
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+</body>
+
+</html>
