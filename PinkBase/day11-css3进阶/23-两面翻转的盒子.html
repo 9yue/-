@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>23-两面翻转的盒子</title>
+  <style>
+    body {
+      perspective: 400px;
+    }
+
+    .box {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 100px auto;
+      /* 让北面的蓝色盒子保留立体空间 给父级添加 */
+      transform-style: preserve-3d;
+      transition: all 1s;
+    }
+
+    .box:hover {
+      transform: rotateY(180deg);
+    }
+
+    .front,
+    .black {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+      line-height: 200px;
+    }
+
+    .front {
+      background-color: pink;
+      z-index: 1;
+    }
+
+    .black {
+      background-color: skyblue;
+      transform: rotateY(180deg);
+    }
+  </style>
 </head>
+
 <body>
-  
+  <div class="box">
+    <div class="front">福福宝贝</div>
+    <div class="black">小鱼小鱼</div>
+  </div>
 </body>
+
 </html>

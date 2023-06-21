@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>13-动画属性</title>
+  <style>
+    @keyframes move {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      100% {
+        transform: translate(1000px, 0);
+      }
+    }
+
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      /* 动画名称 （必须写）*/
+      /* animation-name: move; */
+      /* 持续时间（必须写） */
+      /* animation-duration: 2s; */
+      /* 运动曲线 */
+      /* animation-timing-function: ease; */
+      /* 动画何时开始 (delay ,1s 代表1秒后开始移动 )*/
+      /* animation-delay: 1s; */
+      /* 动画播放次数，默认1，还有infinite(无限)；iteration 重复的 count 次数 */
+      /* animation-iteration-count: infinite; */
+      /* 是否反方向播放，默认normal,如果想要反方向就要写 alternate  */
+      /* animation-direction: alternate; */
+      /* 动画结束后状态 默认的是 backwards（回到起始状态） forwards(停留在结束状态)      */
+      /* animation-fill-mode: forwards; */
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+      /* animation: move 2s linear 0s 1 alternate forwards; */
+      /* 前面两个属性：name duration 必须写 */
+      animation: move 2s alternate forwards;
+    }
+
+    div:hover {
+      /* 鼠标经过这个div，div停止动画，鼠标离开就继续动画 paused（暂停） */
+      animation-play-state: paused;
+    }
+  </style>
 </head>
+
 <body>
-  
+  <div></div>
 </body>
+
 </html>

@@ -1,12 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>24-3D导航栏案例</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      margin: 100px;
+    }
+
+    ul li {
+      float: left;
+      margin: 0 5px;
+      list-style: none;
+      width: 125px;
+      height: 35px;
+      /* box需要旋转，也需要透视，所以给li加perspective，这样li里面的子盒子都有透视效果*/
+      perspective: 500px;
+    }
+
+    .box {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: all 1s;
+      transform-style: preserve-3d;
+    }
+
+    .box:hover {
+      transform: rotateX(90deg);
+    }
+
+    .front,
+    .bottom {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 35px;
+      color: #fff;
+    }
+
+    .front {
+      background-color: pink;
+      z-index: 1;
+      transform: translateZ(17.5px);
+    }
+
+    .bottom {
+      background-color: skyblue;
+      /* 这个x轴一定是负值 */
+      /* 如果有移动 或着 其它样式，必须先写移动 */
+      transform: translateY(17.5px) rotateX(-90deg);
+    }
+  </style>
 </head>
+
 <body>
-  
+  <ul>
+    <li>
+      <div class="box">
+        <div class="front">笨蛋小福</div>
+        <div class="bottom">笨蛋小猫在此</div>
+      </div>
+    </li>
+    <li>
+      <div class="box">
+        <div class="front">笨蛋小福</div>
+        <div class="bottom">笨蛋小猫在此</div>
+      </div>
+    </li>
+    <li>
+      <div class="box">
+        <div class="front">笨蛋小福</div>
+        <div class="bottom">笨蛋小猫在此</div>
+      </div>
+    </li>
+    <li>
+      <div class="box">
+        <div class="front">笨蛋小福</div>
+        <div class="bottom">笨蛋小猫在此</div>
+      </div>
+    </li>
+  </ul>
 </body>
+
 </html>
