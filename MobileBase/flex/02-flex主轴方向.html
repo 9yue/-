@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02-flex主轴方向</title>
+  <style>
+    div {
+      /* 给父亲添加flex属性 */
+      display: flex;
+      width: 80%;
+      height: 300px;
+      background-color: pink;
+      /* 默认的主轴是x轴 行 row,那么y轴就是侧轴 */
+      /* 子元素是跟主轴排列的 */
+      /* flex-direction: row; */
+      /* 简单了解 反转(从右到左排列) */
+      /* flex-direction: row-reverse; */
+
+      /* 把主轴设为y轴，那么x轴就是侧轴 */
+      flex-direction: column;
+    }
+
+    div span {
+      width: 150px;
+      height: 150px;
+      background-color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+  </div>
+</body>
+
+</html>

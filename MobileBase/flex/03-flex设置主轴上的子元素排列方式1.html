@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03-flex设置主轴上的子元素排列方式1</title>
+  <style>
+    div {
+      display: flex;
+      width: 80%;
+      height: 300px;
+      background-color: pink;
+      /* 默认主轴是 x轴 row*/
+      flex-direction: row;
+      /* justify-content: 是设置主轴上子元素的排列方式 */
+      /* 1.flex-start:justify-content默认排列方式 */
+      /* justify-content: flex-start; */
+      /*2.flex-end  */
+      /* justify-content: flex-end; */
+      /* 3.center：子元素居中对齐 */
+      /* justify-content: center; */
+      /* 4.space-around：平分剩余空间 */
+      /* justify-content: space-around; */
+      /* 4.space-between:两边贴边，再平分剩余空间（重要） */
+      justify-content: space-between;
+
+    }
+
+    div span {
+      width: 150px;
+      height: 150px;
+      background-color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+  </div>
+</body>
+
+</html>
