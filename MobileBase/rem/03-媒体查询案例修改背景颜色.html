@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03-媒体查询案例修改背景颜色</title>
+  <style>
+    html {
+      font-size: 12px;
+    }
+
+    div {
+      font-size: 12px;
+      width: 15rem;
+      height: 15rem;
+      background-color: pink;
+    }
+
+    p {
+      /* 1.em是相对父元素的字体来说的，10em=10*12px（父元素字体大小）=120px */
+      /* width: 10em;
+      height: 10em; */
+      /* 2.rem是相对html元素的字体来说的，10em=10*14px（html元素的字体大小）=140px */
+      width: 10rem;
+      height: 10rem;
+      background-color: slateblue;
+      /*3.rem优势：通过修改html元素字体大小来改变页面中的元素大小可以整体控制 */
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p></p>
+  </div>
+</body>
+
+</html>
