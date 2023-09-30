@@ -7,34 +7,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>03-媒体查询案例修改背景颜色</title>
   <style>
-    html {
-      font-size: 12px;
+    /* 媒体查询一般按照 从小到大 或者 从大到小的顺序来 */
+    /* 1.小于540 颜色变成蓝色 */
+    @media screen and (max-width:539px) {
+      body {
+        background-color: skyblue;
+      }
     }
 
-    div {
-      font-size: 12px;
-      width: 15rem;
-      height: 15rem;
-      background-color: pink;
+    /* 2.540-970 页面颜色为绿色 */
+    /* @media screen and (min-width:540px) and (max-width:969px) {
+      body {
+        background-color: greenyellow;
+      }
+    } */
+
+    /* 利用代码层叠性，大于970部分会被下面的代码覆盖，就只执行540-970之前是绿色 */
+    @media screen and (min-width:540px) {
+      body {
+        background-color: greenyellow;
+      }
     }
 
-    p {
-      /* 1.em是相对父元素的字体来说的，10em=10*12px（父元素字体大小）=120px */
-      /* width: 10em;
-      height: 10em; */
-      /* 2.rem是相对html元素的字体来说的，10em=10*14px（html元素的字体大小）=140px */
-      width: 10rem;
-      height: 10rem;
-      background-color: slateblue;
-      /*3.rem优势：通过修改html元素字体大小来改变页面中的元素大小可以整体控制 */
+    /* 3.大于等于970 页面颜色为粉色 */
+    @media screen and (min-width:970px) {
+      body {
+        background-color: pink;
+      }
     }
+
+    /* 5. screen 还有 and 是必须带上不能省略的*/
+    /* 6.数字后面必须跟单位 970px px不能省略 */
   </style>
 </head>
 
 <body>
-  <div>
-    <p></p>
-  </div>
+
 </body>
 
 </html>
